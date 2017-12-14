@@ -5,7 +5,7 @@
   </div>
 </div>
 <div *ngIf="contact" class="row">
-  <form class="col-md-12" ngNativeValidate>
+  <form #myForm="ngForm"  class="col-md-12" ngNativeValidate>
     <div class="form-group">
     
       <label for="contact-name">Name</label>
@@ -13,17 +13,18 @@
     </div>
     <div class="form-group">
       <label for="contact-email">Email</label>
-      <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="support@mlab.com"/>
+      <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="support@mlab.com" required/>
     </div>
     <div class="form-group">
       <label for="contact-phone-mobile">Mobile</label>
-      <input class="form-control" name="contact-phone-mobile" [(ngModel)]="contact.phone.mobile" placeholder="1234567890"/>
+      <input class="form-control" name="contact-phone-mobile" [(ngModel)]="contact.phone.mobile" placeholder="1234567890" required/>
     </div>
     <div class="form-group">
       <label for="contact-phone-work">Work</label>
       <input class="form-control" name="contact-phone-work" [(ngModel)]="contact.phone.work" placeholder="0123456789"/>
     </div>
-    <button class="btn btn-primary" *ngIf="!contact._id" (click)="createContact(contact)">Create</button>
+    <!-- submit button will call submitform function if form is valid -->
+    <button type="submit" class="btn btn-default" *ngIf="!contact._id" (click)="submitForm(myForm.form.valid)">submit</button>
     <button class="btn btn-info" *ngIf="contact._id" (click)="updateContact(contact)">Update</button>
     <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact(contact._id)">Delete</button>
   </form>

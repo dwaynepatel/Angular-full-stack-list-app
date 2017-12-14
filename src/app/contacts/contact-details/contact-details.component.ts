@@ -38,4 +38,13 @@ export class ContactDetailsComponent {
       this.deleteHandler(deletedContactId);
     });
   }
+  // function to submit the form after all validation has occurred            
+  submitForm = function(isValid) {
+    
+        // check to make sure the form is completely valid
+        if (isValid) {
+          alert('our form is amazing');
+        }
+    
+      };
 }
