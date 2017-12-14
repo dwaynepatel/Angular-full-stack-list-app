@@ -39,11 +39,12 @@ export class ContactDetailsComponent {
     });
   }
   // function to submit the form after all validation has occurred            
-  submitForm = function(isValid) {
+  submitForm = function(isValid, contact) {
     
         // check to make sure the form is completely valid
         if (isValid) {
           alert('our form is amazing');
+          this.createContact(contact);
         }
     
       };
