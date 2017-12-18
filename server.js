@@ -3,11 +3,6 @@ var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 
-var http = require("http");
-setInterval(function() {
-    http.get("https://maynooth.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
-
 var CONTACTS_COLLECTION = "contacts";
 
 var app = express();

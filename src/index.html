@@ -5,7 +5,13 @@
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <title>Skills List</title>
-  <base href="/">
+  <script>
+  var http = require("http");
+  setInterval(function() {
+      http.get("https://maynooth.herokuapp.com");
+  }, 300000); // every 5 minutes (300000)
+  <base href="/"></base>
+  </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
