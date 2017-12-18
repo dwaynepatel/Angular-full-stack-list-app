@@ -43,7 +43,7 @@ export class ContactDetailsComponent {
     
         // check to make sure the form is completely valid
         if (isValid) {
-          alert('our form is amazing');
+         // alert('form is valid');
           this.createContact(contact);
         }
     
