@@ -70,5 +70,18 @@ html,body{
   50% { transform:scale(1.2)}
 }
 
+/* for mobile devices remove the background image and add a scroll */
+@media (max-width: 640px) 
+{
+    .header{
+      overflow: scroll;
+    }
+    .header:before{
+      height: 1200px;
+      background:#1B2030;
+    }
+    
+}
+
 
 
