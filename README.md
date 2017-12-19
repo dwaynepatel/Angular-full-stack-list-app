@@ -1,3 +1,7 @@
+Web App and RESTful API Server Using the MEAN Stack, MongoDB, Git with HTML5 validation and a moving background.
+Thi app is bilt on the Heroku tutorial and creates a list of people with their skills recorded.
+
+
 # MeanContactlistAngular2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
